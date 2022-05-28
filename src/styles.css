@@ -20,10 +20,28 @@ li {
   line-height: 20px;
 }
 
-.weather-container {
+.weather-app-wrapper {
   max-width: 800px;
   margin: 30px auto;
+}
+.weather-container {
   padding: 20px;
   border: 1px solid #dadde1;
   border-radius: 7px;
+}
+
+.footer {
+  display: block;
+  margin: 0;
+  text-align: center;
+}
+
+.temperature {
+  font-size: 45px;
+}
+
+.units {
+  position: relative;
+  font-size: 16px;
+  top: -32px;
 }

@@ -22,34 +22,39 @@
   </head>
   <body>
     <div class="container">
-      <div class="weather-container">
-        <h2>New York</h2>
-        <h5>Saturday 10:00</h5>
-        <ul>
-          <li>Clear</li>
-        </ul>
-        <div class="row">
-          <div class="col-6">
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/64/rain.png"
-              alt="rain"
-            />
-            21°C | °F
-          </div>
-          <div class="col-6">
-            <ul>
-              <li>Humidity: 76%</li>
-              <li>Wind: 8mph</li>
-            </ul>
+      <div class="weather-app-wrapper">
+        <div class="weather-container">
+          <h2>New York</h2>
+          <h5>Saturday 10:00</h5>
+          <ul>
+            <li>Clear</li>
+          </ul>
+          <div class="row">
+            <div class="col-6">
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                alt="cloudy"
+              />
+              <span class="temperature">21</span>
+              <span class="units">°C | °F</span>
+            </div>
+            <div class="col-6">
+              <ul>
+                <li>Humidity: 76%</li>
+                <li>Wind: 8mph</li>
+              </ul>
+            </div>
           </div>
         </div>
-        <small>
+        <small class="footer">
           <a href="https://github.com/shadssss/weather-app" target="_blank"
             >Open-source code</a
           >
           by Shadia Adedokun</small
         >
       </div>
+
+      <!--Heading-->
     </div>
     <script src="src/app.js"></script>
   </body>
