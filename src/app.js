@@ -1,3 +1,5 @@
+// Showing the date and time
+
 function formateDate() {
   let now = new Date();
   let hours = now.getHours();
@@ -21,8 +23,9 @@ function formateDate() {
   return `${day} ${hours}:${minutes}`;
 }
 
+// Showing the city and temperature
+
 function displayTemperature(response) {
-  console.log(response.data);
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   let cityElement = document.querySelector("#city");
