@@ -10,6 +10,7 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -24,10 +25,10 @@
     <div class="container">
       <div class="weather-app-wrapper">
         <div class="weather-container">
-          <h2>New York</h2>
-          <h5>Saturday 10:00</h5>
+          <h2 id="city">London</h2>
+          <h4>Saturday 10:00</h4>
           <ul>
-            <li>Clear</li>
+            <li id="weather-description">Clear</li>
           </ul>
           <div class="row">
             <div class="col-6">
@@ -35,13 +36,13 @@
                 src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
                 alt="cloudy"
               />
-              <span class="temperature">21</span>
+              <span class="temperature" id="temperature">21</span>
               <span class="units">°C | °F</span>
             </div>
             <div class="col-6">
               <ul>
-                <li>Humidity: 76%</li>
-                <li>Wind: 8mph</li>
+                <li>Humidity: <span id="humidity"> 76</span>%</li>
+                <li>Wind: <span id="wind"> 8</span>mph</li>
               </ul>
             </div>
           </div>
