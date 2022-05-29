@@ -1,4 +1,4 @@
-// Showing the date and time
+// Show the date and time
 
 function formateDate() {
   let now = new Date();
@@ -23,7 +23,7 @@ function formateDate() {
   return `${day} ${hours}:${minutes}`;
 }
 
-// Showing the city, temperature and weather icon
+// Show the city, temperature and weather icon
 
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
@@ -46,7 +46,19 @@ function displayTemperature(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
-let apiKey = "2f6e65972b364005048a48f3b792c599";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=London&appid=${apiKey}&units=metric`;
+// Search Button
 
-axios.get(apiUrl).then(displayTemperature);
+function search(city) {
+  let apiKey = "2f6e65972b364005048a48f3b792c599";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
