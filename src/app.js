@@ -23,7 +23,7 @@ function formateDate() {
   return `${day} ${hours}:${minutes}`;
 }
 
-// Showing the city and temperature
+// Showing the city, temperature and weather icon
 
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");

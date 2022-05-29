@@ -38,15 +38,20 @@ li {
 }
 
 .temperature {
-  font-size: 45px;
+  font-size: 55px;
 }
 
 .units {
   position: relative;
   font-size: 16px;
-  top: -32px;
+  top: -40px;
 }
 
 #weather-description {
   margin-bottom: 20px;
+}
+
+#icon {
+  margin-right: 10px;
+  float: left;
 }
