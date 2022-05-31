@@ -47,12 +47,13 @@ li:first-letter {
 
 .temperature {
   font-size: 55px;
+  line-height: 1;
 }
 
 .units {
   position: relative;
   font-size: 16px;
-  top: -40px;
+  top: -30px;
 }
 
 #weather-description {
@@ -62,6 +63,8 @@ li:first-letter {
 #icon {
   margin-right: 10px;
   float: left;
+  height: 64px;
+  width: 64px;
 }
 
 #fahrenheit-temp {
