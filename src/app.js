@@ -93,3 +93,33 @@ let fahrenheitLink = document.querySelector("#fahrenheit-temp");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
 
 search("London");
+
+// Upcoming weather forecast
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Sat", "Sun", "Mon", "Tue", "Wed", "Thu"];
+
+  let forecastHTML = `<div class="row">`;
+
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+  <div class="col-2">
+    <div class="weather-forecast-date">${day}</div>
+    <img
+      src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+      alt=""
+      width="42"
+    />
+    <div class="weather-forecast-temp">18° 12</div>
+  </div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+displayForecast();
