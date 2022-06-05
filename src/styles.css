@@ -28,6 +28,7 @@ li:first-letter {
   max-width: 700px;
   margin: 30px auto;
 }
+
 .weather-container {
   padding: 20px;
   border: 1px solid #dadde1;
@@ -58,6 +59,7 @@ li:first-letter {
   display: block;
   margin: 0;
   text-align: center;
+  font-weight: 500;
 }
 
 .temperature {
