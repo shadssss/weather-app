@@ -104,27 +104,42 @@ search("London");
 
 // Upcoming weather forecast
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
+
 function displayForecast(response) {
-  console.log(response.data.daily);
+  let forecast = response.data.daily;
+
   let forecastElement = document.querySelector("#forecast");
 
   let days = ["Sat", "Sun", "Mon", "Tue", "Wed", "Thu"];
 
   let forecastHTML = `<div class="row">`;
 
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `
   <div class="col-2">
-    <div class="weather-forecast-date">${day}</div>
+    <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
     <img
-      src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+      src="https://openweathermap.org/img/wn/${
+        forecastDay.weather[0].icon
+      }@2x.png"
       alt=""
       width="42"
     />
-    <div class="weather-forecast-temp">18° 12</div>
+    <div class="weather-forecast-temp">${Math.round(
+      forecastDay.temp.max
+    )}°</div>
   </div>`;
+    }
   });
 
   forecastHTML = forecastHTML + `</div>`;
